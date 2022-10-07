@@ -24,49 +24,41 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// Manufacturer
+    /// ReasonCode
     /// </summary>
     [DataContract]
-        public partial class Manufacturer :  IEquatable<Manufacturer>, IValidatableObject
+        public partial class ReasonCode :  IEquatable<ReasonCode>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Manufacturer" /> class.
+        /// Initializes a new instance of the <see cref="ReasonCode" /> class.
         /// </summary>
-        /// <param name="name">name (required).</param>
-        /// <param name="homePage">homePage.</param>
-        /// <param name="phone">phone.</param>
-        public Manufacturer(string name = default(string), string homePage = default(string), string phone = default(string))
+        /// <param name="reasonCodeId">reasonCodeId.</param>
+        /// <param name="reasonCodeName">reasonCodeName.</param>
+        /// <param name="groupId">groupId.</param>
+        public ReasonCode(int? reasonCodeId = default(int?), string reasonCodeName = default(string), int? groupId = default(int?))
         {
-            // to ensure "name" is required (not null)
-            if (name == null)
-            {
-                throw new InvalidDataException("name is a required property for Manufacturer and cannot be null");
-            }
-            else
-            {
-                this.Name = name;
-            }
-            this.HomePage = homePage;
-            this.Phone = phone;
+            this.ReasonCodeId = reasonCodeId;
+            this.ReasonCodeName = reasonCodeName;
+            this.GroupId = groupId;
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets ReasonCodeId
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name="reasonCodeId", EmitDefaultValue=false)]
+        public int? ReasonCodeId { get; set; }
 
         /// <summary>
-        /// Gets or Sets HomePage
+        /// Gets or Sets ReasonCodeName
         /// </summary>
-        [DataMember(Name="homePage", EmitDefaultValue=false)]
-        public string HomePage { get; set; }
+        [DataMember(Name="reasonCodeName", EmitDefaultValue=false)]
+        public string ReasonCodeName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Phone
+        /// Gets or Sets GroupId
         /// </summary>
-        [DataMember(Name="phone", EmitDefaultValue=false)]
-        public string Phone { get; set; }
+        [DataMember(Name="groupId", EmitDefaultValue=false)]
+        public int? GroupId { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -75,10 +67,10 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Manufacturer {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  HomePage: ").Append(HomePage).Append("\n");
-            sb.Append("  Phone: ").Append(Phone).Append("\n");
+            sb.Append("class ReasonCode {\n");
+            sb.Append("  ReasonCodeId: ").Append(ReasonCodeId).Append("\n");
+            sb.Append("  ReasonCodeName: ").Append(ReasonCodeName).Append("\n");
+            sb.Append("  GroupId: ").Append(GroupId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,34 +91,34 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Manufacturer);
+            return this.Equals(input as ReasonCode);
         }
 
         /// <summary>
-        /// Returns true if Manufacturer instances are equal
+        /// Returns true if ReasonCode instances are equal
         /// </summary>
-        /// <param name="input">Instance of Manufacturer to be compared</param>
+        /// <param name="input">Instance of ReasonCode to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Manufacturer input)
+        public bool Equals(ReasonCode input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    this.ReasonCodeId == input.ReasonCodeId ||
+                    (this.ReasonCodeId != null &&
+                    this.ReasonCodeId.Equals(input.ReasonCodeId))
                 ) && 
                 (
-                    this.HomePage == input.HomePage ||
-                    (this.HomePage != null &&
-                    this.HomePage.Equals(input.HomePage))
+                    this.ReasonCodeName == input.ReasonCodeName ||
+                    (this.ReasonCodeName != null &&
+                    this.ReasonCodeName.Equals(input.ReasonCodeName))
                 ) && 
                 (
-                    this.Phone == input.Phone ||
-                    (this.Phone != null &&
-                    this.Phone.Equals(input.Phone))
+                    this.GroupId == input.GroupId ||
+                    (this.GroupId != null &&
+                    this.GroupId.Equals(input.GroupId))
                 );
         }
 
@@ -139,12 +131,12 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.HomePage != null)
-                    hashCode = hashCode * 59 + this.HomePage.GetHashCode();
-                if (this.Phone != null)
-                    hashCode = hashCode * 59 + this.Phone.GetHashCode();
+                if (this.ReasonCodeId != null)
+                    hashCode = hashCode * 59 + this.ReasonCodeId.GetHashCode();
+                if (this.ReasonCodeName != null)
+                    hashCode = hashCode * 59 + this.ReasonCodeName.GetHashCode();
+                if (this.GroupId != null)
+                    hashCode = hashCode * 59 + this.GroupId.GetHashCode();
                 return hashCode;
             }
         }

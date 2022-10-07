@@ -24,49 +24,41 @@ using SwaggerDateConverter = IO.Swagger.Client.SwaggerDateConverter;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// Manufacturer
+    /// State
     /// </summary>
     [DataContract]
-        public partial class Manufacturer :  IEquatable<Manufacturer>, IValidatableObject
+        public partial class State :  IEquatable<State>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="Manufacturer" /> class.
+        /// Initializes a new instance of the <see cref="State" /> class.
         /// </summary>
-        /// <param name="name">name (required).</param>
-        /// <param name="homePage">homePage.</param>
-        /// <param name="phone">phone.</param>
-        public Manufacturer(string name = default(string), string homePage = default(string), string phone = default(string))
+        /// <param name="stateId">stateId.</param>
+        /// <param name="stateName">stateName.</param>
+        /// <param name="stateCode">stateCode.</param>
+        public State(decimal? stateId = default(decimal?), string stateName = default(string), string stateCode = default(string))
         {
-            // to ensure "name" is required (not null)
-            if (name == null)
-            {
-                throw new InvalidDataException("name is a required property for Manufacturer and cannot be null");
-            }
-            else
-            {
-                this.Name = name;
-            }
-            this.HomePage = homePage;
-            this.Phone = phone;
+            this.StateId = stateId;
+            this.StateName = stateName;
+            this.StateCode = stateCode;
         }
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets StateId
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name="stateId", EmitDefaultValue=false)]
+        public decimal? StateId { get; set; }
 
         /// <summary>
-        /// Gets or Sets HomePage
+        /// Gets or Sets StateName
         /// </summary>
-        [DataMember(Name="homePage", EmitDefaultValue=false)]
-        public string HomePage { get; set; }
+        [DataMember(Name="stateName", EmitDefaultValue=false)]
+        public string StateName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Phone
+        /// Gets or Sets StateCode
         /// </summary>
-        [DataMember(Name="phone", EmitDefaultValue=false)]
-        public string Phone { get; set; }
+        [DataMember(Name="stateCode", EmitDefaultValue=false)]
+        public string StateCode { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -75,10 +67,10 @@ namespace IO.Swagger.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Manufacturer {\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  HomePage: ").Append(HomePage).Append("\n");
-            sb.Append("  Phone: ").Append(Phone).Append("\n");
+            sb.Append("class State {\n");
+            sb.Append("  StateId: ").Append(StateId).Append("\n");
+            sb.Append("  StateName: ").Append(StateName).Append("\n");
+            sb.Append("  StateCode: ").Append(StateCode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -99,34 +91,34 @@ namespace IO.Swagger.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as Manufacturer);
+            return this.Equals(input as State);
         }
 
         /// <summary>
-        /// Returns true if Manufacturer instances are equal
+        /// Returns true if State instances are equal
         /// </summary>
-        /// <param name="input">Instance of Manufacturer to be compared</param>
+        /// <param name="input">Instance of State to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Manufacturer input)
+        public bool Equals(State input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.Name == input.Name ||
-                    (this.Name != null &&
-                    this.Name.Equals(input.Name))
+                    this.StateId == input.StateId ||
+                    (this.StateId != null &&
+                    this.StateId.Equals(input.StateId))
                 ) && 
                 (
-                    this.HomePage == input.HomePage ||
-                    (this.HomePage != null &&
-                    this.HomePage.Equals(input.HomePage))
+                    this.StateName == input.StateName ||
+                    (this.StateName != null &&
+                    this.StateName.Equals(input.StateName))
                 ) && 
                 (
-                    this.Phone == input.Phone ||
-                    (this.Phone != null &&
-                    this.Phone.Equals(input.Phone))
+                    this.StateCode == input.StateCode ||
+                    (this.StateCode != null &&
+                    this.StateCode.Equals(input.StateCode))
                 );
         }
 
@@ -139,12 +131,12 @@ namespace IO.Swagger.Model
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Name != null)
-                    hashCode = hashCode * 59 + this.Name.GetHashCode();
-                if (this.HomePage != null)
-                    hashCode = hashCode * 59 + this.HomePage.GetHashCode();
-                if (this.Phone != null)
-                    hashCode = hashCode * 59 + this.Phone.GetHashCode();
+                if (this.StateId != null)
+                    hashCode = hashCode * 59 + this.StateId.GetHashCode();
+                if (this.StateName != null)
+                    hashCode = hashCode * 59 + this.StateName.GetHashCode();
+                if (this.StateCode != null)
+                    hashCode = hashCode * 59 + this.StateCode.GetHashCode();
                 return hashCode;
             }
         }
