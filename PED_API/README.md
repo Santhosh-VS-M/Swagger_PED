@@ -104,7 +104,7 @@ Class | Method | HTTP request | Description
  - [Model.InventoryItem](docs/InventoryItem.md)
  - [Model.Manufacturer](docs/Manufacturer.md)
  - [Model.ReasonCode](docs/ReasonCode.md)
- - [Model.State](docs/State.md)
+ - [Model.States](docs/States.md)
 
 <a name="documentation-for-authorization"></a>
 ## Documentation for Authorization
