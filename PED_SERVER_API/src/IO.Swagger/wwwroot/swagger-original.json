@@ -235,7 +235,7 @@
           "homePage" : "https://www.acme-corp.com"
         }
       },
-      "State" : {
+      "States" : {
         "type" : "object",
         "properties" : {
           "stateId" : {
@@ -247,11 +247,6 @@
           "stateCode" : {
             "type" : "string"
           }
-        },
-        "example" : {
-          "stateName" : "stateName",
-          "stateId" : 0.8008281904610115,
-          "stateCode" : "stateCode"
         }
       },
       "ReasonCode" : {

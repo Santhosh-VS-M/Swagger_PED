@@ -63,7 +63,7 @@ namespace IO.Swagger.Controllers
             //TODO: Uncomment the next line to return response 200 or use other options such as return this.NotFound(), return this.BadRequest(..), ...
             // return StatusCode(200, default(List<State>));
             string exampleJson = null;
-            exampleJson = "[ {\n  \"stateName\" : \"stateName\",\n  \"stateId\" : 0.8008281904610115,\n  \"stateCode\" : \"stateCode\"\n}, {\n  \"stateName\" : \"stateName\",\n  \"stateId\" : 0.8008281904610115,\n  \"stateCode\" : \"stateCode\"\n} ]";
+            exampleJson = "[ \"{}\", \"{}\" ]";
             
                         var example = exampleJson != null
                         ? JsonConvert.DeserializeObject<List<State>>(exampleJson)
